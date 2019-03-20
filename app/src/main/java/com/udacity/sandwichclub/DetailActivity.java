@@ -93,7 +93,7 @@ public class DetailActivity extends AppCompatActivity {
             if(sandwich.getAlsoKnownAs().size() > 0) {
                 String alsoKnown = "";
                 for (String name : sandwich.getAlsoKnownAs())
-                    alsoKnown = alsoKnown + name + ", ";
+                    alsoKnown += name + ", ";
                 alsoKnownTextView.setText(alsoKnown.replaceAll(", $", ""));
             }else{ // removing text view which is not used
                 informationLinearLayout.removeView(alsoKnownLabelTextView);
@@ -120,7 +120,7 @@ public class DetailActivity extends AppCompatActivity {
             if(sandwich.getIngredients().size() > 0) {
                 String ingredients = "";
                 for (String ingredient : sandwich.getIngredients()) {
-                    ingredients = ingredients + ingredient + ", ";
+                    ingredients += ingredient + ", ";
                 }
                 ingredientsTextView.setText(ingredients.replaceAll(", $", ""));
             } else { // removing text view which is not used
