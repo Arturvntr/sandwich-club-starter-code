@@ -120,9 +120,9 @@ public class DetailActivity extends AppCompatActivity {
             if(sandwich.getIngredients().size() > 0) {
                 String ingredients = "";
                 for (String ingredient : sandwich.getIngredients()) {
-                    ingredients += ingredient + ", ";
+                    ingredients += "- " + ingredient + "\n";
                 }
-                ingredientsTextView.setText(ingredients.replaceAll(", $", ""));
+                ingredientsTextView.setText(ingredients);
             } else { // removing text view which is not used
                 informationLinearLayout.removeView(ingredientsLabelTextView);
                 informationLinearLayout.removeView(ingredientsTextView);
